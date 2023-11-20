@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap')
 
-font-family: 'Montagu Slab', serif;
-
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -10,4 +8,34 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.body {
+    background-color: #fffdf4;
+    padding: 0 5vw;
+    user-select: none;
+    font-family: 'Montagu Slab', serif;
+}
+
+.headerImage {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: min-content !important;
+    z-index: -1;
+    opacity: 70%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+}
+
+#headerText {
+    font-family: 'Montagu Slab', serif;
+    bottom: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    justify-items: right;
+    opacity: 100%;
+    color: #fffdf4;
 }
