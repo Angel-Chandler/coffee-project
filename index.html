@@ -56,23 +56,38 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>All</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <input id="submit" type="submit" />
+        <div class="search-wrapper">
+            <label For="search">Search Coffees</label>
+            <input type="search" id="search" data-search>
+        </div>
+    </form>
+    <form>
+        <label for="roast-input"></label>
+        <select id="roast-input">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <div class="coffee-suggestion">
+            <label for="coffeeAdd">Add Coffee Suggestion</label>
+            <input type="search" id="coffeeAdd" data-coffeeAddition>
+        </div>
+        <button id="submit-coffeeSuggest" class="btn">Submit</button>
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div>
+        <div id="coffees">
+            <div>NAME</div>
+            <div>ROAST</div>
+        </div>
+    </div>
+
 </section>
 <footer>
     <p>(c) 2023 All rights reserved</p>
