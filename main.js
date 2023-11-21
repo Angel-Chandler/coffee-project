@@ -29,41 +29,47 @@
         }
 
     })
+    // Declared a const for the coffee cards
+    const coffeeCardsContainer = document.getElementById("coffeeCards");
 
-
+    // function that generates an HTML string representing a "coffee card" based on the information of a given coffee object.
     function renderCoffee(coffee) {
-        let html = '<div class="coffee">';
-        html += `<div>${coffee.name}</div>`;
+        let html = '<div class="card" style="width: 18rem;">';
+        html += `<img src="images/IMG-20210719-WA0004_1_900x.webp" class="card-img-top">`;
+        html += `<div class="card-body">${coffee.name}</div>`;
         html += `<div>${coffee.roast}</div>`;
         html += '</div>';
 
         return html;
     }
-
+    // this function responsible for rendering coffee objects on the webpage.
     function renderCoffees(coffees) {
-        let html = '';
+        coffeeCardsContainer.innerHTML = '';
         coffees.forEach(coffee => {
-            html += renderCoffee(coffee);
+            const cardHtml = renderCoffee(coffee);
+            coffeeCardsContainer.innerHTML += cardHtml;
         });
-        return html;
     }
 
-    //
+    const value = searchInput.value.toLowerCase();
+    const selectedRoast = document.querySelector('#roast-selection').value.toLowerCase();
+    // filters through the coffees array
     function updateCoffees(event) {
         event.preventDefault();
-        const value = searchInput.value.toLowerCase();
-        const selectedRoast = document.querySelector('#roast-selection').value.toLowerCase();
 
+        coffeeCardsContainer.innerHTML = '';
 
-
-        const filteredCoffees = coffees.filter(coffee => {
-            const isNameMatch = coffee.name.toLowerCase().includes(value);
-            const isRoastMatch = coffee.roast.toLowerCase().includes(selectedRoast);
-            const isAllMatch =  selectedRoast === 'all'
-            return isNameMatch && (isRoastMatch || isAllMatch);
+        // Iterate through the original array of coffees
+        coffees.forEach(coffee => {
+            // const filteredCoffees = coffeeCardsContainer.filter(coffee => {
+            const isNameMatch = coffeeCardsContainer.name.toLowerCase().includes(value);
+            const isRoastMatch = coffeeCardsContainer.roast.toLowerCase().includes(selectedRoast);
+            const isAllMatch = selectedRoast === 'all'
+            if (isNameMatch && (isRoastMatch || isAllMatch)) {
+                const cardHtml = renderCoffee(coffee);
+                coffeeCardsContainer.innerHTML += cardHtml;
+            }
         });
-
-        tbody.innerHTML = renderCoffees(filteredCoffees);
     }
 
     // combo function event for inputing a coffee search and or submitting
@@ -76,6 +82,8 @@
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+
     const coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light' },
@@ -93,15 +101,14 @@
         {id: 14, name: 'French', roast: 'dark' },
     ];
 
+
+
     const tbody = document.querySelector('#coffees');
-    const submitButton = document.querySelector('#submit');
-    const roastSelection = document.querySelector('#roast-selection');
-    const allMatch = document.querySelector('#roast-selection')
+    const submitButton = document.querySelector('form').addEventListener('submit', updateCoffees);
 
     tbody.innerHTML = renderCoffees(coffees);
 
     submitButton.addEventListener('click', updateCoffees);
-
 
 
     init();

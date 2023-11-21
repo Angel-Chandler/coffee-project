@@ -12,7 +12,7 @@ td, th {
 
 .body {
     background-color: #fffdf4;
-    padding: 0 5vw;
+    padding: 0 3vw;
     user-select: none;
     font-family: 'Montagu Slab', serif;
 }
@@ -39,3 +39,11 @@ td, th {
     opacity: 100%;
     color: #fffdf4;
 }
+
+#searchRoast {
+
+}
+row{
+
+}
+

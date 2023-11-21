@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
@@ -8,12 +8,12 @@
     <title>Rich Coffee Roastery</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand">Navbar</a>
+                <a class="navbar-brand">Anchors.edge Roastery</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,7 +39,7 @@
 <div class="d-flex position-relative">
     <div id="header" class="container-fluid d-flex" >
         <div  id="headerText" class="d-flex col-lg-10 position-absolute">
-            <h1 class="picHeader"> Rich Coffee Roastery </h1>
+            <h1 class="picHeader"> Anchors.edge Roastery </h1>
             <h3>Order Your Whole Bean Colombian Coffee Today!</h3>
             <button class="btn-1">Order Now</button>
         </div>
@@ -48,53 +48,79 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
-        </div>
 <section id="coffeeSelection" class="d-flex">
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option class="allClass">all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-        <div class="search-wrapper">
-            <label For="search">Search Coffees</label>
-            <input type="search" id="search" data-search>
+<!--    used bootstrap attributes to create a field for each form searchRoast-->
+    <div class="d-flex width 100%">
+        <form id="searchRoast" class="col-md-6">
+            <label class="visually-hidden" for="roast-selection" for="autoSizingSelect">Filter by Roast</label>
+            <select id="roast-selection" class="form-select" id="autoSizingSelect">
+                <option class="allClass">all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </form>
         </div>
-    </form>
-    <form>
-        <label for="roast-input"></label>
+
+        <div class="col">
+            <form>
+                <input id="submit" type="submit" type="text" class="form-control" class="search-wrapper" placeholder="Type Here" aria-label="Last name">
+                    <label For="search">Search Coffees</label>
+                <input type="search" id="search" data-search>
+            </form>
+        </div>
+
+<!--       div <label for="roast-selection"></label>-->
+<!--        <select id="roast-selection">-->
+<!--            <option class="allClass">all</option>-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--&lt;!&ndash;        <input id="submit" type="submit" />&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="search-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;            <label For="search">Search Coffees</label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input type="search" id="search" data-search>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+    <div class=" d-flex row body width 100%">
+        <div>
+    <form class="col-md-4">
+        <label for="roast-input"> Input Roast</label>
         <select id="roast-input">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <div class="coffee-suggestion">
+        <div class=" d-flex coffee-suggestion">
             <label for="coffeeAdd">Add Coffee Suggestion</label>
             <input type="search" id="coffeeAdd" data-coffeeAddition>
         </div>
-        <button id="submit-coffeeSuggest" class="btn">Submit</button>
+        <button id="submit-coffeeSuggest" type="button" class="btn btn-secondary">Submit</button>
     </form>
-
-    <div>
-        <div id="coffees">
-            <div>NAME</div>
-            <div>ROAST</div>
-        </div>
     </div>
-
+    <section class=" col flex">
+        <div class="container">
+            <div class="row">
+                <div id="coffeeCards" class="card-container d-flex flex-wrap" >
+                </div>
+             </div>
+        </div>
+    </section>
+    </div>
 </section>
 <footer>
-    <p>(c) 2023 All rights reserved</p>
     <div id="social-media-links">
     </div>
-</footer>
+<div class="card mb-3">
+    <img src="images/pexels-lukas-rodriguez-3551762.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
 
+    </div>
+</div>
+</footer>
     <script src="main.js"></script>
 </body>
 </html>
