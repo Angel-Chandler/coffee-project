@@ -44,11 +44,12 @@
     }
     // this function responsible for rendering coffee objects on the webpage.
     function renderCoffees(coffees) {
-        coffeeCardsContainer.innerHTML = '';
+        let html = '';
         coffees.forEach(coffee => {
             const cardHtml = renderCoffee(coffee);
             coffeeCardsContainer.innerHTML += cardHtml;
         });
+        return html
     }
 
     const value = searchInput.value.toLowerCase();
@@ -57,14 +58,17 @@
     function updateCoffees(event) {
         event.preventDefault();
 
-        coffeeCardsContainer.innerHTML = '';
+        const value = searchInput.value.toLowerCase();
+        const selectedRoast = document.querySelector('#roast-selection').value.toLowerCase();
 
-        // Iterate through the original array of coffees
+        coffeeCardsContainer.innerHTML = ''; // Clear previous cards
+
+        // Filter through the original array of coffees
         coffees.forEach(coffee => {
-            // const filteredCoffees = coffeeCardsContainer.filter(coffee => {
-            const isNameMatch = coffeeCardsContainer.name.toLowerCase().includes(value);
-            const isRoastMatch = coffeeCardsContainer.roast.toLowerCase().includes(selectedRoast);
-            const isAllMatch = selectedRoast === 'all'
+            const isNameMatch = coffee.name.toLowerCase().includes(value);
+            const isRoastMatch = coffee.roast.toLowerCase().includes(selectedRoast);
+            const isAllMatch = selectedRoast === 'all';
+
             if (isNameMatch && (isRoastMatch || isAllMatch)) {
                 const cardHtml = renderCoffee(coffee);
                 coffeeCardsContainer.innerHTML += cardHtml;
@@ -72,8 +76,11 @@
         });
     }
 
+
+
     // combo function event for inputing a coffee search and or submitting
-    function init() {
+    function init(event) {
+        event.preventDefault()
         searchInput.addEventListener("input", updateCoffees);
         document.querySelector('#submit').addEventListener('click', updateCoffees);
         tbody.innerHTML = renderCoffees(coffees);
