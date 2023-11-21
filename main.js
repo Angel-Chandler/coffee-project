@@ -53,14 +53,14 @@
         event.preventDefault();
         const value = searchInput.value.toLowerCase();
         const selectedRoast = document.querySelector('#roast-selection').value.toLowerCase();
-        const allRoastOption = document.querySelector('#roast-selection').value.toLowerCase();
+
 
 
         const filteredCoffees = coffees.filter(coffee => {
             const isNameMatch = coffee.name.toLowerCase().includes(value);
             const isRoastMatch = coffee.roast.toLowerCase().includes(selectedRoast);
-            const isAllMatch =  coffee.roast.toLowerCase().includes(allRoastOption);
-            return isNameMatch && isRoastMatch || isAllMatch;
+            const isAllMatch =  selectedRoast === 'all'
+            return isNameMatch && (isRoastMatch || isAllMatch);
         });
 
         tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -77,7 +77,7 @@
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     const coffees = [
-        {id: 1, name: 'Light City', roast: 'light' , all:'all'},
+        {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light' },
         {id: 3, name: 'Cinnamon', roast: 'light' },
         {id: 4, name: 'City', roast: 'medium' },
