@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap"
+          rel="stylesheet">
     <title>Rich Coffee Roastery</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,10 +16,13 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand">Anchors.edge Roastery</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav flex">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -28,17 +33,18 @@
                             <a class="nav-link" href="#">Coffee by Name</a>
                         </li>
                     </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search Coffee" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search Coffee" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </nav>
     </div>
 </header>
 <div class="d-flex position-relative">
-    <div id="header" class="container-fluid d-flex" >
-        <div  id="headerText" class="d-flex col-lg-10 position-absolute">
+    <div id="header" class="container-fluid d-flex">
+        <div id="headerText" class="d-flex col-lg-10 position-absolute">
             <h1 class="picHeader"> Anchors.edge Roastery </h1>
             <h3>Order Your Whole Bean Colombian Coffee Today!</h3>
             <button class="btn-1">Order Now</button>
@@ -48,79 +54,50 @@
         </div>
     </div>
 </div>
-<section id="coffeeSelection" class="d-flex">
-<!--    used bootstrap attributes to create a field for each form searchRoast-->
-    <div class="d-flex width 100%">
+<section>
+    <div id=filterCoffee>
         <form id="searchRoast" class="col-md-6">
-            <label class="visually-hidden" for="roast-selection" for="autoSizingSelect">Filter by Roast</label>
-            <select id="roast-selection" class="form-select" id="autoSizingSelect">
-                <option class="allClass">all</option>
+            <div id="coffeeSelection" class="col">
+                <label class="visually-hidden" for="roast-selection" for="autoSizingSelect">Filter by Roast</label>
+                <select id="roast-selection" class="form-select">
+                    <option class="allClass">all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                    <label For="search">Coffee Name</label>
+                    <input type="search" id="search" data-search>
+                    <input id="submit" type="submit" class="form-control search-wrapper" placeholder="Type Here"
+                           aria-label="Last name">
+                </div>
+        </form>
+    </div>
+</section>
+<section>
+    <div class="d-flex row">
+        <form class="col">
+            <label for="roast-input"> Input Roast</label>
+            <select id="roast-input">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
+            <div class="d-flex coffee-suggestion">
+                <label for="coffeeAdd">Add A Coffee Name</label>
+                <input type="search" id="coffeeAdd" data-coffeeAddition>
+            </div>
+            <button id="submit-coffeeSuggest" type="button" class="btn btn-secondary">Submit</button>
         </form>
-        </div>
-
-        <div class="col">
-            <form class="preventSubmit">
-                <input id="submit" type="submit"  class="form-control search-wrapper" placeholder="Type Here" aria-label="Last name">
-                    <label For="search">Search Coffees</label>
-                <input type="search" id="search" data-search>
-            </form>
-        </div>
-
-<!--       div <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option class="allClass">all</option>-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--&lt;!&ndash;        <input id="submit" type="submit" />&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="search-wrapper">&ndash;&gt;-->
-<!--&lt;!&ndash;            <label For="search">Search Coffees</label>&ndash;&gt;-->
-<!--&lt;!&ndash;            <input type="search" id="search" data-search>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-    <div class=" d-flex row body width 100%">
-        <div>
-    <form class="col-md-4">
-        <label for="roast-input"> Input Roast</label>
-        <select id="roast-input">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <div class=" d-flex coffee-suggestion">
-            <label for="coffeeAdd">Add Coffee Suggestion</label>
-            <input type="search" id="coffeeAdd" data-coffeeAddition>
-        </div>
-        <button id="submit-coffeeSuggest" type="button" class="btn btn-secondary">Submit</button>
-    </form>
     </div>
-    <section class=" col flex">
-        <div class="container">
-            <div class="row">
-                <div id="coffeeCards" class="card-container d-flex flex-wrap" >
-                </div>
-             </div>
-        </div>
-    </section>
+</section>
+<section>
+    <div id="coffeeCards" class="d-flex row-col">
     </div>
 </section>
 <footer>
     <div id="social-media-links">
     </div>
-<div class="card mb-3">
-    <img src="images/pexels-lukas-rodriguez-3551762.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-
-    </div>
-</div>
 </footer>
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

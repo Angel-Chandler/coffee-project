@@ -1,17 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap');
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+* {
+    border: 1px solid red;
 }
 
 .body {
     background-color: #fffdf4;
+    margin: 0;
     padding: 0 3vw;
     user-select: none;
     font-family: 'Montagu Slab', serif;
@@ -40,10 +35,62 @@ td, th {
     color: #fffdf4;
 }
 
-#searchRoast {
-
+#filterCoffee {
+    margin: 8px auto;
+    padding: 2px;
+    width: 25%;
+    display: grid;
 }
-row{
 
+#coffeeCards {
+    margin: 8px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: auto ;
+    gap: 16px;
 }
 
+.card {
+    height: 100px;
+    border: 5px solid blanchedalmond;
+    cursor: pointer;
+}
+
+#coffeeCards {
+    display: flex;
+    flex-wrap: wrap;
+    /*margin: 48px auto;*/
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    height: 250px;
+    width: 200px;
+    border-radius: 8px;
+    margin: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    /*border-top-left-radius: 8px;*/
+    /*border-top-right-radius: 8px;*/
+    /*max-width: 1%;*/
+    /*height: auto;*/
+}
+
+.coffee-img {
+    width: 100px;
+    height: 100px;
+}
+.card-body {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    color: #6c757d;
+}
