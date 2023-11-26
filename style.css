@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap');
 
-* {
-    border: 1px solid red;
-}
+/** {*/
+/*    border: 1px solid red;*/
+/*}*/
 
 .body {
     background-color: #fffdf4;
@@ -45,13 +45,12 @@
 #coffeeCards {
     margin: 8px auto;
     width: max-content;
-    display: grid;
-    grid-template-columns: auto ;
     gap: 16px;
 }
 
 .card {
     height: 100px;
+    width: 150px;
     border: 5px solid blanchedalmond;
     cursor: pointer;
 }
