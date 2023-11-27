@@ -5,7 +5,7 @@
 /*}*/
 
 .body {
-    background-color: #fffdf4;
+    background-image: url("images/pexels-nudos-adicora-15055048.jpg");
     margin: 0;
     padding: 0 3vw;
     user-select: none;
@@ -22,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 40px;
+    border: 5px solid blanchedalmond;
 }
 
 #headerText {
@@ -48,46 +49,32 @@
     gap: 16px;
 }
 
-.card {
-    height: 100px;
-    width: 150px;
-    border: 5px solid blanchedalmond;
-    cursor: pointer;
-}
 
 #coffeeCards {
     display: flex;
     flex-wrap: wrap;
-    /*margin: 48px auto;*/
 }
 
 .card {
-    border: 1px solid #dee2e6;
-    height: 250px;
-    width: 200px;
+    border: 4px solid blanchedalmond;
+    height: 285px;
+    width: 230px;
     border-radius: 8px;
     margin: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
-    /*border-top-left-radius: 8px;*/
-    /*border-top-right-radius: 8px;*/
-    /*max-width: 1%;*/
-    /*height: auto;*/
-}
-
 .coffee-img {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 200px;
 }
 .card-body {
     padding: 16px;
 }
 
 .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 8px;
+    font-size: 2.25rem;
+    margin-bottom: 2px;
 }
 
 .card-text {

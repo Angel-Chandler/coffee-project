@@ -71,20 +71,20 @@
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
     const coffees = [
-        {id: 1, name: 'Light City', roast: 'light', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 2, name: 'Half City', roast: 'light', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 3, name: 'Cinnamon', roast: 'light', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 4, name: 'City', roast: 'medium', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 5, name: 'American', roast: 'medium', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 6, name: 'Breakfast', roast: 'medium', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 7, name: 'High', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 8, name: 'Continental', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 9, name: 'New Orleans', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 10, name: 'European', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 11, name: 'Espresso', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 12, name: 'Viennese', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 13, name: 'Italian', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
-        {id: 14, name: 'French', roast: 'dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 1, name: 'Light City', roast: 'Light', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 2, name: 'Half City', roast: 'Light', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 3, name: 'Cinnamon', roast: 'Light', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 4, name: 'City', roast: 'Medium', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 5, name: 'American', roast: 'Medium', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 6, name: 'Breakfast', roast: 'Medium', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 7, name: 'High', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 8, name: 'Continental', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 9, name: 'New Orleans', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 10, name: 'European', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 11, name: 'Espresso', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 12, name: 'Viennese', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 13, name: 'Italian', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
+        {id: 14, name: 'French', roast: 'Dark', image: 'IMG-20210719-WA0004_1_900x.webp'},
     ];
 
 
