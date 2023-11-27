@@ -8,15 +8,15 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,200;16..144,300;16..144,400&display=swap"
           rel="stylesheet">
-    <title>Rich Coffee Roastery</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rich Port Roastery</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand">Anchors.edge Roastery</a>
+                <a class="navbar-brand">Rich Port Roastery</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search Coffee" aria-label="Search">
+                        <input type="search" id="search" data-search class="form-control me-2" placeholder="Search Coffee Name" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
@@ -46,8 +46,8 @@
 <div class="d-flex position-relative">
     <div id="header" class="container-fluid d-flex">
         <div id="headerText" class="d-flex col-lg-10 position-absolute">
-            <h1 class="picHeader"> Anchors.edge Roastery </h1>
-            <h3>Order Your Whole Bean Colombian Coffee Today!</h3>
+            <h1 class="picHeader"> Rich Port Roastery </h1>
+            <h3>Order Whole Bean Colombian Coffee Today!</h3>
             <button class="btn-1">Order Now</button>
         </div>
         <div class="headerImage d-flex col-lg-8">
@@ -56,10 +56,10 @@
     </div>
 </div>
 <!-- Coffee Selection Navigation Bar-->
-<section>
+<section id="searchCoffee">
     <nav class="navbar navbar-expand-lg mb-3 bg-body-tertiary">
-        <div id=filterCoffee class="container-fluid row mt-3">
-            <form id="searchRoast" class="col-6">
+        <div id=filterCoffee class="container-fluid row d-flex">
+            <form id="searchRoast" class="row">
                 <div id="coffeeSelection" class="row">
                     <label class="visually-hidden" for="roast-selection">Filter by Roast</label>
                     <select id="roast-selection" class="form-select">
@@ -74,28 +74,27 @@
                            aria-label="Last name">
                 </div>
             </form>
+            <form id="inputRoast" class="row">
+                <label for="roast-input"> Input Roast</label>
+                <select id="roast-input">
+                    <option>LIGHT</option>
+                    <option>MEDIUM</option>
+                    <option>DARK</option>
+                </select>
+                <div class="d-flex coffee-suggestion">
+                    <label for="coffeeAdd">Add A Coffee Name</label>
+                    <input type="search" id="coffeeAdd" data-coffeeAddition>
+                </div>
+                <button id="submit-coffeeSuggest" type="button" class="btn btn-secondary">Submit</button>
+            </form>
         </div>
-    <div class="d-flex row">
-        <form class="col">
-            <label for="roast-input"> Input Roast</label>
-            <select id="roast-input">
-                <option>LIGHT</option>
-                <option>MEDIUM</option>
-                <option>DARK</option>
-            </select>
-            <div class="d-flex coffee-suggestion">
-                <label for="coffeeAdd">Add A Coffee Name</label>
-                <input type="search" id="coffeeAdd" data-coffeeAddition>
-            </div>
-            <button id="submit-coffeeSuggest" type="button" class="btn btn-secondary">Submit</button>
-        </form>
-    </div>
     </nav>
 </section>
+</br>
 <section class="col flex">
     <div class="container">
         <div class="row">
-            <div id="coffeeCards" class="card-container  flex-wrap">
+            <div id="coffeeCards" class="card-container justify-content-center flex-wrap">
             </div>
         </div>
     </div>
