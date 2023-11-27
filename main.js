@@ -69,7 +69,6 @@
     }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-
     const coffees = [
         {id: 1, name: 'Light City', roast: 'Light', image: 'IMG-20210719-WA0004_1_900x.webp'},
         {id: 2, name: 'Half City', roast: 'Light', image: 'IMG-20210719-WA0004_1_900x.webp'},
